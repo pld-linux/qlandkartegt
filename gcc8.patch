@@ -1,0 +1,76 @@
+--- qlandkartegt-1.8.1/3rdparty/map2gcm/main.cpp~	2014-08-08 11:53:46.000000000 +0200
++++ qlandkartegt-1.8.1/3rdparty/map2gcm/main.cpp	2019-04-06 10:31:37.345289713 +0200
+@@ -40,7 +40,7 @@
+ #define _MKSTR(x)           _MKSTR_1(x)
+ #endif
+ 
+-#define VER_STR             _MKSTR(VER_MAJOR)"."_MKSTR(VER_MINOR)"."_MKSTR(VER_STEP)
++#define VER_STR             _MKSTR(VER_MAJOR) "." _MKSTR(VER_MINOR) "." _MKSTR(VER_STEP)
+ #define WHAT_STR            "map2gcm, Version " VER_STR
+ 
+ #define MAX_TILE_SIZE   1024
+--- qlandkartegt-1.8.1/3rdparty/map2rmap/main.cpp~	2014-08-08 11:53:42.000000000 +0200
++++ qlandkartegt-1.8.1/3rdparty/map2rmap/main.cpp	2019-04-06 10:35:40.638287282 +0200
+@@ -33,7 +33,7 @@
+ #define _MKSTR(x)           _MKSTR_1(x)
+ #endif
+ 
+-#define VER_STR             _MKSTR(VER_MAJOR)"."_MKSTR(VER_MINOR)"."_MKSTR(VER_STEP)
++#define VER_STR             _MKSTR(VER_MAJOR) "." _MKSTR(VER_MINOR) "." _MKSTR(VER_STEP)
+ #define WHAT_STR            "map2rmap, Version " VER_STR
+ 
+ 
+--- qlandkartegt-1.8.1/3rdparty/map2rmp/main.cpp~	2014-08-08 11:53:46.000000000 +0200
++++ qlandkartegt-1.8.1/3rdparty/map2rmp/main.cpp	2019-04-06 10:36:14.732042916 +0200
+@@ -32,7 +32,7 @@
+ #define _MKSTR(x)           _MKSTR_1(x)
+ #endif
+ 
+-#define VER_STR             _MKSTR(VER_MAJOR)"."_MKSTR(VER_MINOR)"."_MKSTR(VER_STEP)
++#define VER_STR             _MKSTR(VER_MAJOR) "." _MKSTR(VER_MINOR) "." _MKSTR(VER_STEP)
+ #define WHAT_STR            "map2rmp, Version " VER_STR
+ 
+ int main(int argc, char ** argv)
+--- qlandkartegt-1.8.1/3rdparty/map2rmp/CFileGenerator.cpp~	2014-08-08 11:53:46.000000000 +0200
++++ qlandkartegt-1.8.1/3rdparty/map2rmp/CFileGenerator.cpp	2019-04-06 10:36:57.432572912 +0200
+@@ -27,7 +27,7 @@
+ #define _MKSTR(x)           _MKSTR_1(x)
+ #endif
+ 
+-#define VER_STR             _MKSTR(VER_MAJOR)"."_MKSTR(VER_MINOR)"."_MKSTR(VER_STEP)
++#define VER_STR             _MKSTR(VER_MAJOR) "." _MKSTR(VER_MINOR) "." _MKSTR(VER_STEP)
+ 
+ 
+ extern "C"
+--- qlandkartegt-1.8.1/3rdparty/map2jnx/main.cpp~	2014-08-08 11:53:42.000000000 +0200
++++ qlandkartegt-1.8.1/3rdparty/map2jnx/main.cpp	2019-04-06 10:37:28.652961115 +0200
+@@ -51,7 +51,7 @@
+ #define _MKSTR(x)           _MKSTR_1(x)
+ #endif
+ 
+-#define VER_STR             _MKSTR(VER_MAJOR)"."_MKSTR(VER_MINOR)"."_MKSTR(VER_STEP)
++#define VER_STR             _MKSTR(VER_MAJOR) "." _MKSTR(VER_MINOR) "." _MKSTR(VER_STEP)
+ #define WHAT_STR            "map2jnx, Version " VER_STR
+ 
+ #define JNX_MAX_TILES       50000 //6250
+--- qlandkartegt-1.8.1/3rdparty/cache2gtiff/main.cpp~	2014-08-08 11:53:46.000000000 +0200
++++ qlandkartegt-1.8.1/3rdparty/cache2gtiff/main.cpp	2019-04-06 10:37:57.093315233 +0200
+@@ -35,7 +35,7 @@
+ #define _MKSTR(x)           _MKSTR_1(x)
+ #endif
+ 
+-#define VER_STR             _MKSTR(VER_MAJOR)"."_MKSTR(VER_MINOR)"."_MKSTR(VER_STEP)
++#define VER_STR             _MKSTR(VER_MAJOR) "." _MKSTR(VER_MINOR) "." _MKSTR(VER_STEP)
+ #define WHAT_STR            "cache2gtiff, Version " VER_STR
+ 
+ 
+--- qlandkartegt-1.8.1/src/version.h~	2014-08-08 11:53:29.000000000 +0200
++++ qlandkartegt-1.8.1/src/version.h	2019-04-06 10:39:26.654433027 +0200
+@@ -23,6 +23,6 @@
+ #define _MKSTR(x)      _MKSTR_1(x)
+ #endif
+ 
+-#define VER_STR       _MKSTR(VER_MAJOR)"."_MKSTR(VER_MINOR)"."_MKSTR(VER_STEP)
++#define VER_STR       _MKSTR(VER_MAJOR) "." _MKSTR(VER_MINOR) "." _MKSTR(VER_STEP)
+ #define WHAT_STR      "QLandkarte GT, Version " VER_STR
+ #endif                           //VERSION_H
