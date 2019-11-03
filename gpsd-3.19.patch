@@ -1,0 +1,13 @@
+--- qlandkartegt-1.8.1/src/CDeviceGPSD.cpp~	2014-08-08 11:53:27.000000000 +0200
++++ qlandkartegt-1.8.1/src/CDeviceGPSD.cpp	2019-11-03 16:25:35.889558025 +0100
+@@ -212,7 +212,9 @@
+             }                    // if
+             else if( FD_ISSET( gpsdata->gps_fd, &fds ) )
+             {
+-#if GPSD_API_MAJOR_VERSION >= 5
++#if GPSD_API_MAJOR_VERSION >= 6
++                gps_read( gpsdata, NULL, 0 );
++#elif GPSD_API_MAJOR_VERSION >= 5
+                 gps_read( gpsdata );
+ #else
+                 gps_poll( gpsdata );

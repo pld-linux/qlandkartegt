@@ -6,12 +6,13 @@ Summary:	Garmin's MapSource clone for Linux
 Summary(pl.UTF-8):	Klon MapSource pod Linuksa
 Name:		qlandkartegt
 Version:	1.8.1
-Release:	5
+Release:	6
 License:	GPLv2
 Group:		X11/Applications
 Source0:	http://downloads.sourceforge.net/qlandkartegt/%{name}-%{version}.tar.gz
 # Source0-md5:	2bfe90aff7e21b19572b7b250d76a540
 Patch0:		gcc8.patch
+Patch1:		gpsd-3.19.patch
 URL:		http://qlandkarte.org
 BuildRequires:	QtCore-devel >= 4.6.0
 BuildRequires:	QtDBus-devel >= 4.6.0
@@ -41,6 +42,7 @@ Klon MapSource pod Linuksa.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
 install -d build
