@@ -1,0 +1,20 @@
+--- qlandkartegt-1.8.1/src/CDeviceGPSD.cpp.orig	2024-06-23 12:45:57.679963814 +0200
++++ qlandkartegt-1.8.1/src/CDeviceGPSD.cpp	2024-06-23 12:49:29.844582606 +0200
+@@ -235,7 +235,7 @@ void CGPSDThread::run()
+ bool CGPSDThread::decodeData()
+ {
+     // see, if it's interesting
+-    if( gpsdata->fix.time == 0 )
++    if( gpsdata->fix.time.tv_sec == 0 )
+         return true;
+     static const gps_mask_t interesting_mask = TIME_SET | LATLON_SET
+         | ALTITUDE_SET | SPEED_SET | TRACK_SET | STATUS_SET | MODE_SET
+@@ -265,7 +265,7 @@ bool CGPSDThread::decodeData()
+     current_log.lon = gpsdata->fix.longitude;
+     current_log.lat = gpsdata->fix.latitude;
+     current_log.ele = gpsdata->fix.altitude;
+-    current_log.timestamp = gpsdata->fix.time;
++    current_log.timestamp = gpsdata->fix.time.tv_sec;
+     current_log.error_horz = gpsdata->fix.epx;
+     current_log.error_vert = gpsdata->fix.epv;
+     current_log.heading = gpsdata->fix.track;
